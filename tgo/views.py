@@ -22,15 +22,18 @@ def getUser(request):
     all_data=context['data']['data']
     print(len(all_data))
     for d in all_data:
-        user=ApiUsers()
-        user.id=d['id']
-        user.email=d['email']
-        user.name=d['name']
-        user.gender=d['gender']
-        user.created_at=d['created_at']
-        user.updated_at=d['updated_at']
-        user.status=d['status']
-        user.save()
+        user=ApiUsers.objects.get(id=d['id'])
+        if user is None:
+
+            user=ApiUsers()
+            user.id=d['id']
+            user.email=d['email']
+            user.name=d['name']
+            user.gender=d['gender']
+            user.created_at=d['created_at']
+            user.updated_at=d['updated_at']
+            user.status=d['status']
+            user.save()
 
     print(all_data[0]['id'])
     allUsers=ApiUsers.objects.all()

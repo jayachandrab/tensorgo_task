@@ -1,0 +1,38 @@
+
+<form #countryForm="ngForm" (ngSubmit)="createOrUpdate()" class="col-md-6 col-md-offset-4">
+    <label for="" class="col-md-2"></label>
+    <div class="form-group ">
+        <label for="id">Id</label>
+        <input type="text" name="id" #name="ngModel" [(ngModel)]="pond.id" class="form-control" disabled/>
+    </div>
+    <div class="form-group">
+        <label for="email">Eamil</label>
+        <input type="text" name="email" #name="ngModel" [(ngModel)]="pond.email" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="pond.name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" name="status" #name="ngModel" [(ngModel)]="pond.status" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" #name="ngModel" [(ngModel)]="pond.gender" class="form-control" />
+    </div>
+    <!-- <div class="form-group">
+        <label for="created_at">created_at</label>
+        <input type="text" name="created_at" #name="ngModel" [(ngModel)]="pond.created_at" class="form-control" disabled/>
+    </div>
+
+    <div class="form-group">
+        <label for="updated_at">updated_at</label>
+        <input type="text" name="updated_at" #name="ngModel" [(ngModel)]="pond.updated_at" class="form-control" disabled/>
+    </div> -->
+
+   
+  
+
+    <input type="submit" value="submit" class="btn btn-success" />
+</form>
